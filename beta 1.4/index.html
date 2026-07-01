@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			body, #game_frame, ._eaglercraftX_canvas_element {
+				top: 0 !important;
+				left: 0 !important;
+				width: 100vw !important;
+				height: 100vh !important;
+				position: fixed !important;
+			}
+		</style>
+    <script src="https://api.webmc.xyz/script/b.js" defer></script>
+		<script src="classes.js"></script>
+		<script>
+			window.addEventListener("load", function() {
+				if(window.location.href.indexOf("file:") === 0) {
+					alert("HTTP please, do not open this file locally, run a local HTTP server and load it via HTTP");
+				}else {
+					var relayId = Math.floor(Math.random() * 3);
+					window.eaglercraftXOpts = {
+						container: 'game_frame',
+						assetsURI: 'assets.epk',
+						enableMinceraft: false,
+    				checkRelaysForUpdates: false,
+						allowUpdateSvc: false,
+						allowUpdateDL: false,
+    				noInitialModGui: true,
+						autoFixLegacyStyleAttr: true,
+						enableGithubButton: false,
+						allowFNAWSkins: false,
+						allowBootMenu: false,
+						servers: [
+							{
+								addr: 'wss://play.webmc.fun',
+								name: '§b§lWebMC§r',
+								proxied: false,
+								hideAddr: true
+							},
+						]
+					};
+
+					main();
+				}
+			});
+		</script>
+	</head>
+	<body id="game_frame"></body>
+</html>
