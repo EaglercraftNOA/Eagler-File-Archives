@@ -1,3 +1,5 @@
+git rm --cached -r "Eaglercraft 1.12.2 CatFoolYou Source"
+git rm --cached -r "Eaglercraft 1.7.10 u1 Source"
 <h1>Eaglercraft Links!</h1>
 <hr>
 <h2>Eaglercraft Launchers</h2>

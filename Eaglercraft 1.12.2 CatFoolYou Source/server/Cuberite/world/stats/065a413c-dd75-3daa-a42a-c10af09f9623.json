@@ -1,0 +1,19 @@
+{
+	"DataVersion" : 2566,
+	"stats" : 
+	{
+		"custom" : 
+		{
+			"damage_dealt" : 165,
+			"damage_taken" : 100,
+			"drop" : 0,
+			"fall_one_cm" : 1697,
+			"leave_game" : 5,
+			"mob_kills" : 1,
+			"play_one_minute" : 2877,
+			"sprint_one_cm" : 1207,
+			"time_since_death" : 2877,
+			"walk_one_cm" : 6159
+		}
+	}
+}

@@ -1,0 +1,34 @@
+     [14:52:57] --- Started Log ---
+     [14:52:57] Cuberite Jenkins x86_64-linux-gnu -DCMAKE_BUILD_TYPE=Release (master) (id: #378)
+     [14:52:57] from commit eda440e0db028587975c867dbacb513d80df4dca built at: Mon Aug 21 11:55:04 UTC 2023
+     [14:52:57] Creating new server instance...
+     [14:52:57] Reading server config...
+     [14:52:57] Starting server...
+Info [14:52:57] Compatible clients: 1.8.x-1.14.4
+Warn [14:52:57] WARNING: There is not a Proxy Forward Secret set up, and any proxy server can forward a player to this server unless closed from the internet.
+     [14:52:57] Loaded 789 crafting recipes
+Warn [14:52:57] Cannot open file "Protocol/1.14.4/base.recipes.txt", no recipe book recipes will be available!
+     [14:52:57] Loaded 1.12.2 380 recipe book
+Warn [14:52:57] Cannot open file "Protocol/1.13/base.recipes.txt", no recipe book recipes will be available!
+     [14:52:57] Loaded 67 furnace recipes and 66 fuels
+     [14:52:57] Loaded 49 brewing recipes
+Warn [14:52:57] Invalid biome ("BambooJungle") specified in AllowedBiomes in cubeset file Prefabs/SinglePieceStructures/JungleTemple.cubeset. Skipping the biome.
+Warn [14:52:57] Invalid biome ("BambooJungleHills") specified in AllowedBiomes in cubeset file Prefabs/SinglePieceStructures/JungleTemple.cubeset. Skipping the biome.
+     [14:52:57] -- Loading Plugins --
+     [14:52:57] Cannot load plugin, folder "Core" not found.
+     [14:52:57] Cannot load plugin, folder "ChatLog" not found.
+     [14:52:57] -- No Plugins Loaded --
+Warn [14:52:58] World "world_the_end": Did not find an acceptable spawnpoint. Generated a random spawnpoint position at {0, 69, 0}
+     [14:52:58] Startup complete, took 1186ms!
+     [14:53:43] A player connected through a proxy without requiring a forwarding secret. If open to the internet, this is very insecure!
+Info [14:53:43] Player Catfoolyou has joined the game
+Warn [14:53:43] AddEntity: Entity at 0x71547c013d40 (cPlayer, ID 77) spawning in a non-existent chunk.
+Info [14:53:54] Player Catfoolyou has left the game
+     [15:07:41] A player connected through a proxy without requiring a forwarding secret. If open to the internet, this is very insecure!
+Info [15:07:41] Player Catfoolyou has joined the game
+Warn [15:07:41] AddEntity: Entity at 0x71547c0bea70 (cPlayer, ID 194) spawning in a non-existent chunk.
+Info [15:07:58] Player Catfoolyou has left the game
+     [15:08:03] Shutting down server...
+     [15:08:03] Cleaning up...
+     [15:08:03] Shutdown successful!
+     [15:08:03] --- Stopped Log ---

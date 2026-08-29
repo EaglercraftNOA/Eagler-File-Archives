@@ -1,0 +1,92 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.teavm' version '0.9.2'
+}
+
+group = 'org.eaglergradle'
+version = '1.0.0'
+
+sourceSets {
+    main {
+        java {
+            srcDir 'src/main/java'
+        }
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+application {
+    mainClass = 'Start'
+    applicationDefaultJvmArgs = ['-Djava.library.path=versions/1.12/1.12-natives']
+}
+
+distributions {
+    main {
+        contents {
+            from file("$projectDir/src/main/assets")
+            into('/')
+        }
+    }
+
+}
+
+dependencies {
+    runtimeOnly files('assets/versions/1.12/1.12.jar')
+    implementation files('lib/libraries/com/mojang/patchy/1.1/patchy-1.1.jar')
+    implementation files('lib/libraries/oshi-project/oshi-core/1.1/oshi-core-1.1.jar')
+    implementation files('lib/libraries/net/java/dev/jna/jna/4.4.0/jna-4.4.0.jar')
+    implementation files('lib/libraries/net/java/dev/jna/platform/3.4.0/platform-3.4.0.jar')
+    implementation files('lib/libraries/com/ibm/icu/icu4j-core-mojang/51.2/icu4j-core-mojang-51.2.jar')
+    implementation files('lib/libraries/net/sf/jopt-simple/jopt-simple/5.0.3/jopt-simple-5.0.3.jar')
+    implementation files('lib/libraries/com/paulscode/codecjorbis/20101023/codecjorbis-20101023.jar')
+    implementation files('lib/libraries/com/paulscode/codecwav/20101023/codecwav-20101023.jar')
+    implementation files('lib/libraries/com/paulscode/libraryjavasound/20101123/libraryjavasound-20101123.jar')
+    implementation files('lib/libraries/com/paulscode/librarylwjglopenal/20100824/librarylwjglopenal-20100824.jar')
+    implementation files('lib/libraries/com/paulscode/soundsystem/20120107/soundsystem-20120107.jar')
+    implementation files('lib/libraries/io/netty/netty-all/4.1.9.Final/netty-all-4.1.9.Final.jar')
+    implementation files('lib/libraries/com/google/guava/guava/21.0/guava-21.0.jar')
+    implementation files('lib/libraries/org/apache/commons/commons-lang3/3.5/commons-lang3-3.5.jar')
+    implementation files('lib/libraries/commons-io/commons-io/2.5/commons-io-2.5.jar')
+    implementation files('lib/libraries/commons-codec/commons-codec/1.10/commons-codec-1.10.jar')
+    implementation files('lib/libraries/net/java/jinput/jinput/2.0.5/jinput-2.0.5.jar')
+    implementation files('lib/libraries/net/java/jutils/jutils/1.0.0/jutils-1.0.0.jar')
+    implementation files('lib/libraries/com/google/code/gson/gson/2.8.0/gson-2.8.0.jar')
+    implementation files('lib/libraries/com/mojang/authlib/1.5.25/authlib-1.5.25.jar')
+    implementation files('lib/libraries/com/mojang/realms/1.10.16/realms-1.10.16.jar')
+    implementation files('lib/libraries/org/apache/commons/commons-compress/1.8.1/commons-compress-1.8.1.jar')
+    implementation files('lib/libraries/org/apache/httpcomponents/httpclient/4.3.3/httpclient-4.3.3.jar')
+    implementation files('lib/libraries/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3.jar')
+    implementation files('lib/libraries/org/apache/httpcomponents/httpcore/4.3.2/httpcore-4.3.2.jar')
+    implementation files('lib/libraries/it/unimi/dsi/fastutil/7.1.0/fastutil-7.1.0.jar')
+    implementation files('lib/libraries/org/apache/logging/log4j/log4j-api/2.8.1/log4j-api-2.8.1.jar')
+    implementation files('lib/libraries/org/apache/logging/log4j/log4j-core/2.8.1/log4j-core-2.8.1.jar')
+    implementation files('lib/libraries/org/lwjgl/lwjgl/lwjgl/2.9.4-nightly-20150209/lwjgl-2.9.4-nightly-20150209.jar')
+    implementation files('lib/libraries/org/lwjgl/lwjgl/lwjgl_util/2.9.4-nightly-20150209/lwjgl_util-2.9.4-nightly-20150209.jar')
+    implementation files('lib/libraries/com/mojang/text2speech/1.10.3/text2speech-1.10.3.jar')
+    implementation files('lib/libraries/com/google/code/findbugs/jsr305/3.0.1/jsr305-3.0.1.jar')
+    implementation files('lib/libraries/vecmath-1.5.2.jar')
+
+    //TeaVM
+    teavm(teavm.libs.jso)
+    teavm(teavm.libs.jsoApis)
+}
+
+teavm.js {
+    obfuscated = true
+    sourceMap = true
+    targetFileName = "../classes.js"
+    // optimization = OptimizationLevel.ADVANCED
+    outOfProcess = false
+    fastGlobalAnalysis = false
+    processMemory = 1024
+    entryPointName = 'main'
+    mainClass = 'Start'
+    outputDir = file("javascript")
+    properties = null
+    sourceMap = true
+    debugInformation = false
+}
