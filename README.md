@@ -1,3 +1,3 @@
 <h1>Welcome to the Eaglercraft-File-Archives!</h1>
 <hr>
-<h2>An Eaglercraft project, storing every Eaglercraft file/folder on the internet into one repository (Even leaked projects, if its public its on here!)</h2>
+<h2>The Eagler-File-Archive is a github repository that aims to collect and gather every Eaglercraft file and folder into one single location. It acts as a library for all users to find any Eaglercraft content, you could need!</h2>
