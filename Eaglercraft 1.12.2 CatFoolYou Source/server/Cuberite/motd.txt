@@ -1,3 +1,0 @@
-&6Welcome to an Eaglercraft 1.12 server!
-&6https://cuberite.org/
-&6Type /help for all commands
